@@ -3,37 +3,184 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Student Portfolio</title>
+   <title>Kirk Pacanan • Portfolio</title>
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
-      <h1 id="name">Kirk Roden C. Pacanan</h1>
-<img src="profile.jpg" alt="Kirk's Profile Picture" id="profile-img" loading="lazy">
-      <p id="course-year">Computer Science • 2nd Year</p>
-      <button id="theme-toggle">Switch Theme</button>
+   <header class="hero" id="top">
+      <nav class="site-nav">
+         <div class="logo">KP</div>
+         <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle" aria-label="Toggle color theme">Dark</button>
+         </div>
+      </nav>
+
+      <div class="hero-grid">
+         <div class="hero-copy">
+            <p class="badge">Computer Science • 2nd Year</p>
+            <h1>Kirk Roden C. Pacanan</h1>
+            <p class="lead">
+               I build thoughtful web apps, automate the boring stuff, and love polishing
+               user experiences with purposeful animation and clean code.
+            </p>
+            <ul class="hero-stats">
+               <li><strong>15+</strong><span>UI prototypes</span></li>
+               <li><strong>6</strong><span>team projects</span></li>
+               <li><strong>3</strong><span>certifications</span></li>
+            </ul>
+            <div class="cta-group">
+               <a class="btn primary" href="#projects">See Projects</a>
+               <a class="btn ghost" href="mailto:kirkroden.cpacanan@gmail.com">Email Me</a>
+            </div>
+         </div>
+         <div class="hero-photo">
+            <img src="profile.jpg" alt="Kirk Pacanan portrait" loading="lazy">
+            <div class="floating-card">
+               <p>"Design is how it works."</p>
+               <span>- Steve Jobs</span>
+            </div>
+         </div>
+      </div>
    </header>
 
    <main>
       <section id="achievements">
-         <h2>Achievements & Certifications</h2>
-         <ul>
-            <li>ITS Certification</li>
-            <li>Consistent Dean’s Lister</li>
-         </ul>
+         <div class="section-heading">
+            <p>Milestones</p>
+            <h2>Achievements & Certifications</h2>
+         </div>
+         <div class="card-grid">
+            <article class="card">
+               <h3>ITS Certification</h3>
+               <p>Credentialed for technical support fundamentals covering troubleshooting, escalation, and documentation.</p>
+            </article>
+            <article class="card">
+               <h3>Dean’s Lister</h3>
+               <p>Maintained a 1.25 GWA for 4 consecutive semesters through disciplined study habits and peer tutoring.</p>
+            </article>
+            <article class="card">
+               <h3>Campus Hackathon Finalist</h3>
+               <p>Lead front-end dev for a personal finance app prototype judged by industry mentors.</p>
+            </article>
+         </div>
       </section>
 
       <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li>Management Booking System</li>
-            <li>Money Tracker</li>
-         </ul>
+         <div class="section-heading">
+            <p>Hands-on Learning</p>
+            <h2>Selected Projects</h2>
+         </div>
+         <div class="project-grid">
+            <article class="project-card">
+               <div class="project-meta">
+                  <span class="tag">Full Stack</span>
+                  <span class="year">2025</span>
+               </div>
+               <h3>Management Booking System</h3>
+               <p>Built a streamlined booking workflow with analytics and automatic reminders using Express, PostgreSQL, and vanilla JS.</p>
+               <ul class="project-tags">
+                  <li>Node.js</li>
+                  <li>SQL</li>
+                  <li>System Design</li>
+               </ul>
+            </article>
+            <article class="project-card">
+               <div class="project-meta">
+                  <span class="tag">Product Design</span>
+                  <span class="year">2024</span>
+               </div>
+               <h3>Money Tracker</h3>
+               <p>Personal finance dashboard that visualizes daily cash flow trends and savings goals with focus on clarity and simplicity.</p>
+               <ul class="project-tags">
+                  <li>Figma</li>
+                  <li>Charts</li>
+                  <li>UX Writing</li>
+               </ul>
+            </article>
+            <article class="project-card">
+               <div class="project-meta">
+                  <span class="tag">Automation</span>
+                  <span class="year">2024</span>
+               </div>
+               <h3>Study Workflow Toolkit</h3>
+               <p>Collection of Python scripts that scrape schedules, sync reminders, and summarize lecture notes into Anki cards.</p>
+               <ul class="project-tags">
+                  <li>Python</li>
+                  <li>APIs</li>
+                  <li>Notion</li>
+               </ul>
+            </article>
+         </div>
+      </section>
+
+      <section id="skills">
+         <div class="section-heading">
+            <p>Toolbox</p>
+            <h2>Skills & Focus Areas</h2>
+         </div>
+         <div class="skill-chips">
+            <span>HTML & CSS</span>
+            <span>JavaScript (ES6+)</span>
+            <span>React basics</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>Python automation</span>
+            <span>UI Prototyping</span>
+            <span>Technical Writing</span>
+         </div>
+      </section>
+
+      <section id="experience">
+         <div class="section-heading">
+            <p>Journey</p>
+            <h2>Experience & Leadership</h2>
+         </div>
+         <div class="timeline">
+            <article>
+               <h3>STI College CDO</h3>
+               <p class="timeline-meta">2023 — Present • Student Leader</p>
+               <p>Organized peer-study circles, maintained shared learning resources, and mentored first-year CS students.</p>
+            </article>
+            <article>
+               <h3>Google Developer Student Clubs</h3>
+               <p class="timeline-meta">2024 • Volunteer Facilitator</p>
+               <p>Hosted design sprint workshops to help freshmen ship their first responsive website.</p>
+            </article>
+         </div>
+      </section>
+
+      <section id="contact">
+         <div class="section-heading">
+            <p>Let's collaborate</p>
+            <h2>Get in Touch</h2>
+         </div>
+         <div class="contact-card">
+            <p>Email me anytime or connect on socials for internships, hackathons, or freelance collabs.</p>
+            <div class="contact-grid">
+               <a href="mailto:kirkroden.cpacanan@gmail.com" class="contact-item">
+                  <span>Email</span>
+                  <strong>kirkroden.cpacanan@gmail.com</strong>
+               </a>
+               <a href="https://www.linkedin.com" class="contact-item" target="_blank" rel="noreferrer">
+                  <span>LinkedIn</span>
+                  <strong>/in/kirkpacanan</strong>
+               </a>
+               <a href="https://github.com" class="contact-item" target="_blank" rel="noreferrer">
+                  <span>GitHub</span>
+                  <strong>@kirkpacanan</strong>
+               </a>
+            </div>
+         </div>
       </section>
    </main>
 
    <footer>
-      <p>&copy; 2025 Kirk Pacanan | Student Portfolio</p>
+      <p>&copy; 2025 Kirk Pacanan · Built with HTML, CSS, and a lot of coffee.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
    </footer>
 
    <script src="script.js"></script>
