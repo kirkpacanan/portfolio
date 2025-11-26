@@ -30,6 +30,28 @@ body.dark {
     --gradient: radial-gradient(circle at top, #0c1123 0%, #05060b 60%, #05060b 100%);
 }
 
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatCard {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes softPulse {
+    0% { box-shadow: 0 20px 60px rgba(15,24,72,0.0); }
+    100% { box-shadow: 0 20px 60px rgba(15,24,72,0.25); }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -131,6 +153,7 @@ a {
     align-items: center;
     position: relative;
     z-index: 1;
+    animation: fadeUp 0.8s ease-out both;
 }
 
 .hero-copy h1 {
@@ -240,6 +263,34 @@ a {
     border: 1px solid var(--border);
     max-width: 220px;
     font-size: 0.85rem;
+    animation: floatCard 5s ease-in-out infinite;
+}
+
+.hero-stats li,
+.skill-chips span,
+.project-card,
+.card,
+.timeline article,
+.contact-item {
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-stats li:nth-child(2),
+.skill-chips span:nth-child(2),
+.project-card:nth-child(2),
+.card:nth-child(2),
+.timeline article:nth-child(2),
+.contact-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.hero-stats li:nth-child(3),
+.skill-chips span:nth-child(3),
+.project-card:nth-child(3),
+.card:nth-child(3),
+.timeline article:nth-child(3),
+.contact-item:nth-child(3) {
+    animation-delay: 0.2s;
 }
 
 main {
@@ -270,6 +321,10 @@ section {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
+.section-heading {
+    animation: fadeUp 0.6s ease-out;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -297,6 +352,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    animation: softPulse 0.4s forwards;
 }
 
 .project-meta {
@@ -384,6 +445,7 @@ section {
     flex-direction: column;
     gap: 6px;
     transition: border 0.2s ease, transform 0.2s ease;
+    will-change: transform;
 }
 
 .contact-item:hover {
